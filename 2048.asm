@@ -154,7 +154,7 @@ generateRanNum PROC USES eax ecx edi ;Generate random numbers
     ret
 generateRanNum ENDP
 
-reverse PROC USES eax ebx esi edi ecx ebp ;反轉
+reverse PROC USES eax ebx esi edi ecx ebp 
     mov ecx,8 ;4 rows, each row reverse 2 time
     mov esi,OFFSET platform
     mov edi,28 ;the first row start valid position
@@ -176,7 +176,7 @@ reverse PROC USES eax ebx esi edi ecx ebp ;反轉
     ret    
 reverse ENDP
 
-transpose PROC USES eax ecx ebx esi edi ;轉置
+transpose PROC USES eax ecx ebx esi edi 
     mov esi,OFFSET platform
     mov edi,28	;tempi(row)
     mov ecx,28	;tempj(column)
@@ -204,7 +204,7 @@ transpose PROC USES eax ecx ebx esi edi ;轉置
         ret
 transpose ENDP
 
-merge PROC USES ecx eax ebx esi edi ebp ;合併
+merge PROC USES ecx eax ebx esi edi ebp 
     mov ecx,12  ;4 rows, each row left merge 3 time
     mov esi,OFFSET platform
     mov edi,28  ;[i][j]
@@ -238,7 +238,7 @@ merge PROC USES ecx eax ebx esi edi ebp ;合併
     ret
 merge ENDP
 
-compress PROC USES ecx eax ebx esi edi ebp edx ;壓縮
+compress PROC USES ecx eax ebx esi edi ebp edx 
     mov ecx,16      ;4 rows 4 columns
     mov eax,0       ;eax is the constant 0
     mov esi,OFFSET platform
